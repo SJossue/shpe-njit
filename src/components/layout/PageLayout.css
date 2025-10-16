@@ -1,0 +1,26 @@
+/*
+ * PageLayout Styles
+ *
+ * LAYOUT STRATEGY:
+ * - Flexbox to create a "sticky footer" layout
+ * - Main content expands to fill available space
+ * - Footer always sits at bottom, even with little content
+ */
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.main-content {
+  flex: 1; /* Expands to fill available space */
+  width: 100%;
+  background-color: transparent; /* Use body background color */
+}
+
+/*
+ * KEY CONCEPT: "Sticky Footer"
+ * The footer stays at the bottom even when content is short
+ * because .main-content has flex: 1 which makes it grow
+ */
