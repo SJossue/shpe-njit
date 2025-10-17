@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import Hero from './homepage/Hero';
+import PartnerLogos from '../components/PartnerLogos';
 import { homeContent } from '../content/homeContent';
 
 const Home: React.FC = () => {
@@ -10,6 +11,8 @@ const Home: React.FC = () => {
   return (
     <div className="home-page">
       <Hero />
+
+      <PartnerLogos />
 
       <section className="mission-section section-white">
         <div className="section-container">
