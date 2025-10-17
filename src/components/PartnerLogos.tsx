@@ -27,25 +27,29 @@ const PartnerLogos: React.FC = () => {
       <div className="logos-scroll-container">
         <div className="logos-scroll-track">
           {/* First set of logos */}
-          {partners.map((partner, index) => (
-            <div key={`partner-${index}`} className="logo-item">
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="partner-logo"
-              />
-            </div>
-          ))}
+          <div className="logos-set">
+            {partners.map((partner, index) => (
+              <div key={`partner-${index}`} className="logo-item">
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="partner-logo"
+                />
+              </div>
+            ))}
+          </div>
           {/* Duplicate set for seamless loop */}
-          {partners.map((partner, index) => (
-            <div key={`partner-duplicate-${index}`} className="logo-item">
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="partner-logo"
-              />
-            </div>
-          ))}
+          <div className="logos-set">
+            {partners.map((partner, index) => (
+              <div key={`partner-duplicate-${index}`} className="logo-item">
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="partner-logo"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

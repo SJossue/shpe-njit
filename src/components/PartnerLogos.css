@@ -25,17 +25,18 @@
 
 .logos-scroll-container {
   position: relative;
-  height: 400px;
+  width: 100%;
   overflow: hidden;
+  padding: 20px 0;
   mask-image: linear-gradient(
-    to bottom,
+    to right,
     transparent 0%,
     black 10%,
     black 90%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
-    to bottom,
+    to right,
     transparent 0%,
     black 10%,
     black 90%,
@@ -45,21 +46,29 @@
 
 .logos-scroll-track {
   display: flex;
-  flex-direction: column;
-  animation: scrollVertical 20s linear infinite;
-  gap: 40px;
+  flex-direction: row;
+  animation: scrollHorizontal 30s linear infinite;
+  width: fit-content;
+}
+
+.logos-set {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  padding: 0 30px;
 }
 
 .logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  min-height: 120px;
+  min-width: 200px;
+  height: 120px;
+  flex-shrink: 0;
 }
 
 .partner-logo {
-  max-width: 200px;
+  max-width: 180px;
   max-height: 100px;
   width: auto;
   height: auto;
@@ -75,12 +84,12 @@
   transform: scale(1.1);
 }
 
-@keyframes scrollVertical {
+@keyframes scrollHorizontal {
   0% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translateX(-50%);
   }
 }
 
@@ -99,17 +108,17 @@
     font-size: 2rem;
   }
 
-  .logos-scroll-container {
-    height: 300px;
+  .logos-set {
+    gap: 40px;
   }
 
   .logo-item {
-    min-height: 100px;
-    padding: 15px;
+    min-width: 150px;
+    height: 100px;
   }
 
   .partner-logo {
-    max-width: 150px;
+    max-width: 130px;
     max-height: 80px;
   }
 }
